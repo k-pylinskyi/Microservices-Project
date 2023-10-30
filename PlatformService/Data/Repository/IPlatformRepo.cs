@@ -1,12 +1,12 @@
 ﻿using PlatformService.Models;
 
-namespace PlatformService.Data;
+namespace PlatformService.Data.Repository;
 
 public interface IPlatformRepo
 {
-    bool SaveChanges();
+    Task<bool> SaveChangesAsync();
     
-    IEnumerable<Platform> GetAllPlatforms();
-    Platform GetPlatformById(int id);
-    void CreatePlatform(Platform platform);
+    Task<IEnumerable<Platform?>> GetAllPlatformsAsync();
+    Task<Platform?> GetPlatformByIdAsync(int id);
+    Task CreatePlatformAsync(Platform? platform);
 }
