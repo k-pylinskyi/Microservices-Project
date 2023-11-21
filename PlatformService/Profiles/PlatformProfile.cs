@@ -11,5 +11,6 @@ public class PlatformProfile : Profile
         // Source -> Target
         CreateMap<PlatformCreateDto, Platform>();
         CreateMap<Platform, PlatformReadDto>();
+        CreateMap<PlatformReadDto, PlatformPublishedDto>();
     }
 }
